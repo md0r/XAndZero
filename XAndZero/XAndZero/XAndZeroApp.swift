@@ -11,7 +11,7 @@ import SwiftUI
 struct XAndZeroApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppModeView()
         }
     }
 }
