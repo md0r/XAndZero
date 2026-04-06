@@ -57,6 +57,7 @@ struct PlayerInGameView: View {
 }
 
 private struct ArrowIndicatorView: View {
+    
     let isCurrentPlayer: Bool
     @Binding var animateArrows: Bool
     
@@ -74,9 +75,11 @@ private struct ArrowIndicatorView: View {
 }
 
 private struct DetailsView: View {
+    
     let player: PlayerProfile
     let orientation: Orientation
     let winsCount: Int
+    
     var body: some View {
         VStack(alignment: orientation == .left ? .leading : .trailing, spacing: 8) {
             NameView(player: player, orientation: orientation)
@@ -96,7 +99,9 @@ private struct DetailsView: View {
 }
 
 private struct ImageView: View {
+    
     let player: PlayerProfile
+    
     var body: some View {
         Image(player.image)
             .resizable()
@@ -112,8 +117,10 @@ private struct ImageView: View {
 }
 
 private struct NameView: View {
+    
     let player: PlayerProfile
     let orientation: Orientation
+    
     var body: some View {
         ZStack(alignment: orientation == .left ? .leading : .trailing) {
             Text("Player 12")
@@ -127,7 +134,9 @@ private struct NameView: View {
 }
 
 private struct CurrentSymbolView: View {
+    
     let orientation: Orientation
+    
     var body: some View {
         Image(systemName: orientation == .left ? "xmark" : "circle")
             .fontWeight(.bold)
@@ -136,7 +145,9 @@ private struct CurrentSymbolView: View {
 }
 
 private struct WinsCountView: View {
+    
     let winsCount: Int
+    
     var body: some View {
         Text("\(winsCount)")
             .foregroundStyle(Color.appTheme.success)

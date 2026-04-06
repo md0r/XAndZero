@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SelectionGroupView<Option: Hashable & CustomStringConvertible>: View {
+    
     let title: String
     let options: [Option]
     @Binding var selectedOption: Option
@@ -21,7 +22,9 @@ struct SelectionGroupView<Option: Hashable & CustomStringConvertible>: View {
 }
 
 private struct TitleView: View {
+    
     var title: String
+    
     var body: some View {
         Text(title)
             .font(.headline)

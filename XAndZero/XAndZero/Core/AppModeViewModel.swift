@@ -9,6 +9,7 @@ import Combine
 import Factory
 
 final class AppModeViewModel: ObservableObject {
+    
     @Published var appMode: AppMode = .gameSetup
     private var cancellables: Set<AnyCancellable> = []
     @Injected(\.appModeStore) var appModeStore
@@ -19,6 +20,7 @@ final class AppModeViewModel: ObservableObject {
 }
 
 private extension AppModeViewModel {
+    
     func setSubscribers() {
         appModeStore.$appMode
         .receive(on: DispatchQueue.main)

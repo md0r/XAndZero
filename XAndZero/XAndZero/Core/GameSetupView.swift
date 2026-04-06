@@ -35,7 +35,9 @@ struct GameSetupView: View {
 }
 
 private struct ColorSchemeToggleView: View {
+    
     @AppStorage(UserDefaultKeys.isDarkMode) private var isDarkMode = true
+    
     func toggleColorScheme() {
         isDarkMode.toggle()
     }
@@ -54,6 +56,7 @@ private struct ColorSchemeToggleView: View {
 }
 
 private struct LogoView: View {
+    
     var body: some View {
         Image(.logo)
             .renderingMode(.template)
@@ -65,6 +68,7 @@ private struct LogoView: View {
 }
 
 private struct WelcomeText: View {
+    
     var body: some View {
         VStack(spacing: 8) {
             Text("X and Zero")

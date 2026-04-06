@@ -13,6 +13,7 @@ private struct Avatars {
 }
 
 struct PlayerSelectionView: View {
+    
     @Binding var player1: PlayerProfile
     @Binding var player2: PlayerProfile
     
@@ -41,6 +42,7 @@ private struct VersusTextView: View {
 }
 
 private struct PlayerView: View {
+    
     @Binding var profile: PlayerProfile
     var isBotToggleEnabled: Bool
     
@@ -59,6 +61,7 @@ private struct PlayerView: View {
 }
 
 private struct CharacterImageArrowSwitcher: View {
+    
     @Binding var profile: PlayerProfile
    
     func switchHumanImage(profile: Binding<PlayerProfile>) {
@@ -84,6 +87,7 @@ private struct CharacterImageArrowSwitcher: View {
 }
 
 private struct CharacterImageView: View {
+    
     var profile: PlayerProfile
    
     var body: some View {
@@ -102,6 +106,7 @@ private struct CharacterImageView: View {
 }
 
 private struct PlayerNameTextView: View {
+    
     var profile: PlayerProfile
    
     var body: some View {
@@ -112,6 +117,7 @@ private struct PlayerNameTextView: View {
 }
 
 private struct CharacterTypeArrowSwitcher: View {
+    
     @Binding var profile: PlayerProfile
    
     func switchPlayerType(profile: Binding<PlayerProfile>) {

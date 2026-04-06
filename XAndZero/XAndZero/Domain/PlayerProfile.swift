@@ -4,8 +4,6 @@
 //
 //  Created by Mihai Dorhan on 02.04.2026.
 //
-
-import Foundation
 import SwiftUI
 
 struct PlayerProfile: Equatable {
